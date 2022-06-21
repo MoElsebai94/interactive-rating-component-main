@@ -1,12 +1,132 @@
-
 :root {
   --colorPrimary: hsl(25, 97%, 53%);
   --colorWhite: hsl(0, 0%, 100%);
   --colorLightGrey: hsl(217, 12%, 63%);
-  --colorMediumGrey: hsl(216, 12%, 54%);
+  --colorMediumGrey: hsla(216, 12%, 54%, 0.205);
   --colorDarkBlue: hsl(213, 19%, 18%);
   --colorVeryDarkBlue: hsl(216, 12%, 8%);
 
   --fontBodySize: 15px;
   --fontFamily: "Overpass", sans-serif;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+* {
+  font-family: var(--fontFamily);
+  color: var(--colorLightGrey);
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--colorVeryDarkBlue);
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main-rating {
+  background-color: var(--colorDarkBlue);
+  border: red;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 150px 50px;
+  padding: 30px;
+  width: 400px;
+}
+
+h1 {
+  color: var(--colorWhite);
+  margin-bottom: 0;
+  align-self: flex-start;
+}
+
+p {
+  font-size: var(--fontBodySize);
+  line-height: 1.7em;
+}
+
+.star-image {
+  align-self: flex-start;
+  background-color: var(--colorMediumGrey);
+  padding: 15px;
+  border-radius: 50px;
+}
+
+.button-rating {
+  background-color: var(--colorMediumGrey);
+  padding: 10px 15px;
+  border-radius: 30px;
+  outline: inherit;
+  border: none;
+  margin-bottom: 20px;
+}
+
+.submit {
+  background-color: var(--colorPrimary);
+  padding: 10px 150px;
+  border: none;
+  border-radius: 20px;
+  color: var(--colorWhite);
+}
+
+.buttons__rating {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1.7em 0;
+  width: 320px;
+}
+
+.button-rating:hover,
+.submit:hover {
+  background-color: var(--colorLightGrey);
+  color: var(--colorWhite);
+  cursor: pointer;
+}
+
+.button-rating:active {
+  background-color: var(--colorPrimary);
+  color: var(--colorWhite);
+}
+
+.submit:active {
+  background-color: var(--colorWhite);
+  color: var(--colorPrimary);
+}
+
+.thankyou {
+  display: none;
+  text-align: center;
+}
+
+.thankyou img {
+  margin-bottom: 1em;
+}
+
+.rating {
+  background-color: var(--colorMediumGrey);
+  color: var(--colorPrimary);
+  border-radius: 1em;
+  padding: 0.4em 1.3em;
+  display: inline-block;
+  margin-bottom: 0.7em;
+}
+
+.selected {
+  background-color: var(--colorLightGrey);
+  color: var(--colorWhite);
 }
